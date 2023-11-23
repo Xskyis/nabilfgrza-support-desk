@@ -69,9 +69,21 @@ function NewTicket () {
             onChange={(e) => setProduct(e.target.value)}
           >
             <option value="">Select Devices</option>
-            <option value='iPhone'>iPhone</option>
-            <option value='iMac'>iMac</option>
-            <option value='iPad'>iPad</option>
+            <option value='Pixel 1'>Pixel 1</option>
+            <option value='Pixel 2'>Pixel 2</option>
+            <option value='Pixel 3'>Pixel 3</option>
+            <option value='Pixel 4'>Pixel 4</option>
+            <option value='Pixel 5'>Pixel 5</option>
+            <option value='Pixel 6'>Pixel 6</option>
+            <option value='Pixel 6 Pro'>Pixel 6 Pro</option>
+            <option value='Pixel 6a'>Pixel 6a</option>
+            <option value='Pixel 7'>Pixel 7</option>
+            <option value='Pixel 7 Pro'>Pixel 7 Pro</option>
+            <option value='Pixel 7a'>Pixel 7a</option>
+            <option value='Pixel 8'>Pixel 8</option>
+            <option value='Pixel 8 Pro'>Pixel 8 Pro</option>
+            <option value='Pixel Fold'>Pixel Fold</option>
+          
           </select>
         </div>
         <div className='form-group'>

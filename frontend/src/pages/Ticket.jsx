@@ -1,6 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { getTicket, reset, closeTicket } from '../features/tickets/ticketSlice'
-import { getNotes, reset as notesReset, createNote } from '../features/notes/noteSlice'
+import {
+  getNotes,
+  reset as notesReset,
+  createNote
+} from '../features/notes/noteSlice'
 import { useEffect, useState } from 'react'
 import { FaPlus } from 'react-icons/fa'
 import Modal from 'react-modal'
@@ -56,9 +60,9 @@ function Ticket () {
   }
 
   // Create note submit
-  const onNoteSubmit = (e) => {
+  const onNoteSubmit = e => {
     e.preventDefault()
-    dispatch(createNote({noteText, ticketId}))
+    dispatch(createNote({ noteText, ticketId }))
     closeModal()
     toast.success('Note added')
   }
@@ -79,12 +83,14 @@ function Ticket () {
     <div className='ticket-page'>
       <header className='ticket-header'>
         <BackButton url='/tickets' />
-        <h2>
-          Ticket ID : {ticket?.ticket?._id}
-          <span className={`status status-${ticket?.ticket?.status}`}>
-            {ticket?.ticket?.status}
-          </span>
-        </h2>
+        <div className='ticket-head'>
+          <h2 className='ticket-id'>
+            Ticket ID : {ticket?.ticket?._id}
+          </h2>
+          <h2 className={`status status-${ticket?.ticket?.status}`}>
+              {ticket?.ticket?.status}
+          </h2>
+        </div>
         <h3>
           Date Submitted:{' '}
           {new Date(ticket?.ticket?.createdAt).toLocaleString('eu-US')}
@@ -127,8 +133,10 @@ function Ticket () {
               rows='1'
             ></textarea>
           </div>
-          <div className="form-group">
-            <button className="btn" type='submit'>Submit</button>
+          <div className='form-group'>
+            <button className='btn' type='submit'>
+              Submit
+            </button>
           </div>
         </form>
       </Modal>

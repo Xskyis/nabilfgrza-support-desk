@@ -6,7 +6,7 @@ function TicketItem({ticket}) {
         <div>{new Date(ticket.createdAt).toLocaleString('in-ID')}</div>
         <div>{ticket.product}</div>
         <div className={`status status-${ticket.status}`}>
-            {ticket.status}
+            <p>{ticket.status}</p>
         </div>
         <Link to={`/ticket/${ticket._id}`} className='btn btn-reverse btn-sm'>
             View
