@@ -87,7 +87,7 @@ function Ticket () {
           <h2 className='ticket-id'>
             Ticket ID : {ticket?.ticket?._id}
           </h2>
-          <h2 className={`status status-${ticket?.ticket?.status}`}>
+          <h2 className={`status-in status-${ticket?.ticket?.status}`}>
               {ticket?.ticket?.status}
           </h2>
         </div>

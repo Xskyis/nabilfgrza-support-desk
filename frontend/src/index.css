@@ -211,7 +211,7 @@ h3 {
 }
 
 .ticket-id {
-  overflow: scroll;
+  overflow: auto;
 }
 
 .ticket-head {
@@ -222,7 +222,7 @@ h3 {
 .ticket,
 .ticket-headings {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   justify-content: space-between;
   align-items: center;
@@ -233,11 +233,29 @@ h3 {
   text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+  .ticket,
+  .ticket-headings {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .ticket-headings {
   font-weight: 700;
 }
 
 .status {
+  background-color: #333;
+  color: #fff;
+  width: 100px;
+  padding: 0 23px;
+  justify-self: center;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.status-in {
   background-color: #333;
   color: #fff;
   width: 100px;
